@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  /* Cores Customizadas do Instituto */
+  --color-treno-red: #e10613;
+  --color-treno-dark: #0f172a;
+  --color-treno-light-blue: #009ee2;
+  --color-treno-title: #1f2230;
+  --color-treno-text: #707876;
+
+  /* Fontes sugeridas para combinar com o estilo motociclista/robusto */
+  --font-display: "Inter", sans-serif;
+}

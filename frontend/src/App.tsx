@@ -1,38 +1,34 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar.tsx";
-
-// Páginas temporárias (vamos criá-las depois)
-const Home = () => (
-  <div className="p-20 text-center">
-    <h1>Página Inicial - Instituto Trenô</h1>
-  </div>
-);
-const QuemSomos = () => (
-  <div className="p-20 text-center">
-    <h1>Nossa História</h1>
-  </div>
-);
-const Projetos = () => (
-  <div className="p-20 text-center">
-    <h1>Nossos Projetos</h1>
-  </div>
-);
-const Doar = () => (
-  <div className="p-20 text-center">
-    <h1>Página de Doação (Pix Dinâmico em breve)</h1>
-  </div>
-);
+import Navbar from "./components/Navbar";
+import QuemSomos from "./pages/QuemSomos";
+import Doar from "./pages/Doar";
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/quem-somos" element={<QuemSomos />} />
-        <Route path="/projetos" element={<Projetos />} />
-        <Route path="/doar" element={<Doar />} />
-      </Routes>
+      <div className="min-h-screen">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="p-20 text-center text-3xl font-bold">
+                Em construção: Home
+              </div>
+            }
+          />
+          <Route path="/quem-somos" element={<QuemSomos />} />
+          <Route
+            path="/projetos"
+            element={
+              <div className="p-20 text-center text-3xl font-bold">
+                Em construção: Projetos
+              </div>
+            }
+          />
+          <Route path="/doar" element={<Doar />} />
+        </Routes>
+      </div>
     </Router>
   );
 }

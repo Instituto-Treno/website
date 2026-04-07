@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import QuemSomos from "./pages/QuemSomos";
 import Doar from "./pages/Doar";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
-      <Navbar />
+      <Header />
       <div className="min-h-screen">
         <Routes>
           <Route
